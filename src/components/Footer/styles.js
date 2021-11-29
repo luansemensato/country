@@ -8,6 +8,6 @@ export const Wrapper = styled('footer')(({ theme }) => ({
 
   a: {
     color: theme.palette.grey[500],
-    textDecoration: 'none'
-  }
+    textDecoration: 'none',
+  },
 }));

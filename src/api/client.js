@@ -3,7 +3,7 @@ import { ApolloClient, HttpLink } from '@apollo/client';
 import { cache } from 'api/cache';
 
 const link = new HttpLink({
-  uri: process.env.NEXT_PUBLIC_API_URL
+  uri: process.env.NEXT_PUBLIC_API_URL,
 });
 
 const client = new ApolloClient({
@@ -12,13 +12,13 @@ const client = new ApolloClient({
   defaultOptions: {
     query: {
       errorPolicy: 'all',
-      fetchPolicy: 'cache-first'
+      fetchPolicy: 'cache-first',
     },
     mutate: {
-      errorPolicy: 'all'
-    }
+      errorPolicy: 'all',
+    },
   },
-  connectToDevTools: true
+  connectToDevTools: true,
 });
 
 export default client;

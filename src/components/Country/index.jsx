@@ -13,9 +13,13 @@ import { COUNTRY } from 'api/queries';
 import * as S from './styles';
 
 function Country({ code }) {
-  const { data: { country } = {}, loading, error } = useQuery(COUNTRY, {
+  const {
+    data: { country } = {},
+    loading,
+    error,
+  } = useQuery(COUNTRY, {
     client,
-    variables: { code }
+    variables: { code },
   });
 
   return (
@@ -30,8 +34,10 @@ function Country({ code }) {
             <Typography variant="h2">{country.emoji}</Typography>
             <Typography variant="h1">{country.native}</Typography>
 
-            {country.states?.map((state) => (
-              <Typography key={state.code} variant="overline">{state.name} ({state.code}); </Typography>
+            {country.states?.map(state => (
+              <Typography key={state.code} variant="overline">
+                {state.name} ({state.code});{' '}
+              </Typography>
             ))}
           </>
         )}
@@ -41,7 +47,7 @@ function Country({ code }) {
 }
 
 Country.propTypes = {
-  code: PropTypes.string.isRequired
+  code: PropTypes.string.isRequired,
 };
 
 export default Country;

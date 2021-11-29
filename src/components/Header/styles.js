@@ -17,6 +17,6 @@ export const Content = styled('div')(({ theme }) => ({
 
   h1: {
     textTransform: 'uppercase',
-    fontSize: 30
-  }
+    fontSize: 30,
+  },
 }));
