@@ -10,7 +10,7 @@ const Footer = () => {
       <Container maxWidth="xl">
         <Typography variant="body1">
           <a
-            href="https://luansemensato.com?utm_source=projeto-portfolio&utm_medium=country&utm_campaign=footer"
+            href="https://luansemensato.com?utm_source=portfolio&utm_medium=country&utm_campaign=footer"
             target="_blank"
             rel="noopener noreferrer"
           >
